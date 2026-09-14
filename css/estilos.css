@@ -117,3 +117,53 @@ footer {
     font-size: 1.8rem;
   }
 }
+/* === Grilla de productos === */
+.productos-destacados {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.productos-destacados h2 {
+  color: var(--color-primario);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.grilla-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-producto {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  background-color: #ddd;
+}
+
+.card-producto h3 {
+  font-size: 1rem;
+  margin: 0.8rem 0 0.4rem;
+}
+
+.precio {
+  color: var(--color-acento);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
