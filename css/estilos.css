@@ -142,6 +142,12 @@ footer {
   padding: 1rem;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-producto .btn-añadir {
+  margin-top: auto;
 }
 
 .card-producto:hover {
@@ -151,10 +157,11 @@ footer {
 
 .card-producto img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 260px;
+  object-fit: contain;
+  padding: 0.5rem;
   border-radius: 5px;
-  background-color: #ddd;
+  background-color: #fff;
 }
 
 .card-producto h3 {
@@ -166,4 +173,25 @@ footer {
   color: var(--color-acento);
   font-weight: bold;
   font-size: 1.2rem;
+}
+.categoria {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.btn-añadir {
+  width: 100%;
+  margin-top: 0.8rem;
+  padding: 0.6rem;
+  background-color: var(--color-primario);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.btn-añadir:hover {
+  background-color: var(--color-acento);
 }
