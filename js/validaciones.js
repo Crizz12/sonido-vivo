@@ -223,3 +223,53 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+// === VALIDACIÓN FORMULARIO DE LOGIN ===
+
+function validarLogin() {
+  let valido = true;
+
+  const correo = document.getElementById("correo-login").value.trim();
+  const password = document.getElementById("password-login").value;
+
+  limpiarError("correo-login");
+  if (correo === "") {
+    mostrarError("correo-login", "El correo es obligatorio");
+    valido = false;
+  } else if (correo.length > 100) {
+    mostrarError("correo-login", "Máximo 100 caracteres");
+    valido = false;
+  } else if (!correoValido(correo)) {
+    mostrarError("correo-login", "Solo se permiten correos @duoc.cl, @profesor.duoc.cl o @gmail.com");
+    valido = false;
+  }
+
+  limpiarError("password-login");
+  if (password === "") {
+    mostrarError("password-login", "La contraseña es obligatoria");
+    valido = false;
+  } else if (password.length < 4 || password.length > 10) {
+    mostrarError("password-login", "La contraseña debe tener entre 4 y 10 caracteres");
+    valido = false;
+  }
+
+  return valido;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const formLogin = document.getElementById("form-login");
+  if (!formLogin) return;
+
+  document.getElementById("correo-login").addEventListener("blur", validarLogin);
+
+  formLogin.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (validarLogin()) {
+      mostrarNotificacion("Sesión iniciada correctamente");
+      setTimeout(function () {
+        window.location.href = "index.html";
+      }, 1500);
+    } else {
+      mostrarNotificacion("Corrige los errores del formulario", "error");
+    }
+  });
+});

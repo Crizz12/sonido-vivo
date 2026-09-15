@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - Sonido Vivo</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">🎸 Sonido Vivo</a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <a href="carrito.html" class="carrito">🛒 Cart (<span id="contador-carrito">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-seccion">
+      <div class="login-marca">
+        <img src="img/guitarra.jpg" alt="Logo Sonido Vivo" class="logo-login">
+        <h2>Sonido Vivo</h2>
+      </div>
+
+      <form id="form-login" class="formulario" novalidate>
+        <h3>Inicio de sesión</h3>
+
+        <div class="campo">
+          <label for="correo-login">Correo *</label>
+          <input type="email" id="correo-login" name="correo" maxlength="100" autocomplete="email">
+          <small class="ayuda">Solo @duoc.cl, @profesor.duoc.cl o @gmail.com</small>
+          <span class="error" id="error-correo-login"></span>
+        </div>
+
+        <div class="campo">
+          <label for="password-login">Contraseña *</label>
+          <input type="password" id="password-login" name="password" maxlength="10" autocomplete="current-password">
+          <small class="ayuda">Entre 4 y 10 caracteres.</small>
+          <span class="error" id="error-password-login"></span>
+        </div>
+
+        <button type="submit" class="btn">Iniciar sesión</button>
+        <p class="texto-link">¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Sonido Vivo - Viña del Mar, Región de Valparaíso</p>
+  </footer>
+
+  <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/validaciones.js"></script>
+</body>
+</html>

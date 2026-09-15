@@ -428,3 +428,26 @@ a.btn-añadir {
   color: var(--color-primario);
   font-size: 0.9rem;
 }
+.login-marca {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.logo-login {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.formulario h3 {
+  margin-bottom: 1.2rem;
+  color: var(--color-primario);
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.6rem;
+}
+
+.texto-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+} 
