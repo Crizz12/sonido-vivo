@@ -36,3 +36,22 @@ function mostrarProductos() {
 
 // Se ejecuta cuando el HTML terminó de cargar
 document.addEventListener("DOMContentLoaded", mostrarProductos);
+// Muestra solo los primeros 4 productos (home)
+function mostrarDestacados() {
+  const contenedor = document.getElementById("productos-destacados");
+  if (!contenedor) return;
+
+  productos.slice(0, 4).forEach(function (producto) {
+    const card = document.createElement("article");
+    card.className = "card-producto";
+    card.innerHTML = `
+      <img src="${producto.imagen}" alt="${producto.nombre}">
+      <h3>${producto.nombre}</h3>
+      <p class="precio">${formatearPrecio(producto.precio)}</p>
+      <a href="productos.html" class="btn-añadir">Ver detalle</a>
+    `;
+    contenedor.appendChild(card);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", mostrarDestacados);
