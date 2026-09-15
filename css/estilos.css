@@ -451,3 +451,84 @@ a.btn-añadir {
   margin-top: 1rem;
   font-size: 0.9rem;
 } 
+/* === Páginas de contenido === */
+.contenido {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.contenido h2 {
+  color: var(--color-primario);
+  margin-bottom: 1.5rem;
+}
+
+.contenido article {
+  margin-bottom: 2rem;
+}
+
+.contenido h3 {
+  color: var(--color-acento);
+  margin-bottom: 0.6rem;
+}
+
+.contenido ul {
+  margin: 0.8rem 0 0 1.5rem;
+}
+
+.contenido li {
+  margin-bottom: 0.3rem;
+}
+/* === Blogs === */
+.seccion-blogs {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.seccion-blogs h2 {
+  color: var(--color-primario);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tarjeta-blog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.tarjeta-blog img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+.blog-texto h3 {
+  color: var(--color-primario);
+  margin-bottom: 0.8rem;
+}
+
+.blog-texto p {
+  margin-bottom: 1.2rem;
+}
+
+.imagen-blog {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  margin: 1rem 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .tarjeta-blog {
+    grid-template-columns: 1fr;
+  }
+}
