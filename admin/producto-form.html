@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo Producto - Administración</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+
+    <aside class="admin-sidebar">
+      <a href="index.html" class="admin-logo">🎸 Sonido Vivo</a>
+      <nav>
+        <ul class="admin-menu">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="producto-form.html" class="activo">Nuevo producto</a></li>
+          <li><a href="usuarios.html">Usuarios</a></li>
+          <li><a href="usuario-form.html">Nuevo usuario</a></li>
+        </ul>
+      </nav>
+      <a href="../index.html" class="volver-tienda">← Volver a la tienda</a>
+    </aside>
+
+    <main class="admin-contenido">
+      <header class="admin-header">
+        <h1>Nuevo producto</h1>
+      </header>
+
+      <section class="admin-seccion">
+        <form id="form-producto" class="formulario-admin" novalidate>
+
+          <div class="campo">
+            <label for="codigo">Código producto *</label>
+            <input type="text" id="codigo" name="codigo" minlength="3">
+            <small class="ayuda">Mínimo 3 caracteres.</small>
+            <span class="error" id="error-codigo"></span>
+          </div>
+
+          <div class="campo">
+            <label for="nombre-prod">Nombre *</label>
+            <input type="text" id="nombre-prod" name="nombre" maxlength="100">
+            <span class="error" id="error-nombre-prod"></span>
+          </div>
+
+          <div class="campo">
+            <label for="descripcion">Descripción (opcional)</label>
+            <textarea id="descripcion" name="descripcion" rows="4" maxlength="500"></textarea>
+            <small class="ayuda">Máximo 500 caracteres.</small>
+            <span class="error" id="error-descripcion"></span>
+          </div>
+
+          <div class="campo">
+            <label for="precio">Precio *</label>
+            <input type="number" id="precio" name="precio" min="0" step="0.01">
+            <small class="ayuda">Un precio 0 se considera producto FREE.</small>
+            <span class="error" id="error-precio"></span>
+          </div>
+
+          <div class="campo">
+            <label for="stock">Stock *</label>
+            <input type="number" id="stock" name="stock" min="0" step="1">
+            <small class="ayuda">Solo números enteros.</small>
+            <span class="error" id="error-stock"></span>
+          </div>
+
+          <div class="campo">
+            <label for="stock-critico">Stock crítico (opcional)</label>
+            <input type="number" id="stock-critico" name="stockCritico" min="0" step="1">
+            <small class="ayuda">Alerta cuando el stock sea igual o inferior a este valor.</small>
+            <span class="error" id="error-stock-critico"></span>
+          </div>
+
+          <div class="campo">
+            <label for="categoria">Categoría *</label>
+            <select id="categoria" name="categoria">
+              <option value="">-- Seleccione la categoría --</option>
+              <option value="Guitarras">Guitarras</option>
+              <option value="Bajos">Bajos</option>
+              <option value="Baterías">Baterías</option>
+              <option value="Teclados">Teclados</option>
+              <option value="Amplificadores">Amplificadores</option>
+              <option value="Micrófonos">Micrófonos</option>
+              <option value="Pedales">Pedales</option>
+              <option value="Accesorios">Accesorios</option>
+            </select>
+            <span class="error" id="error-categoria"></span>
+          </div>
+
+          <div class="campo">
+            <label for="imagen">Imagen (opcional)</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*">
+          </div>
+
+          <div class="acciones-form">
+            <button type="submit" class="btn">Guardar producto</button>
+            <a href="productos.html" class="btn-tabla">Cancelar</a>
+          </div>
+
+        </form>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="../js/productos.js"></script>
+  <script src="../js/usuarios.js"></script>
+  <script src="../js/carrito.js"></script>
+  <script src="../js/validaciones.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -658,3 +658,84 @@ a.btn-añadir {
     grid-template-columns: 1fr;
   }
 }
+/* === Tablas admin === */
+.barra-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabla-admin {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tabla-admin thead {
+  background-color: var(--color-fondo);
+}
+
+.tabla-admin th {
+  text-align: left;
+  padding: 0.8rem;
+  font-size: 0.82rem;
+  color: #555;
+  border-bottom: 2px solid #ddd;
+}
+
+.tabla-admin td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+.tabla-admin tbody tr:hover {
+  background-color: #fafafa;
+}
+
+.stock-critico {
+  color: var(--color-acento);
+  font-weight: bold;
+}
+
+.etiqueta-rol {
+  background-color: var(--color-fondo);
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.78rem;
+}
+
+.acciones {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-tabla {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  text-decoration: none;
+  color: var(--color-texto);
+  cursor: pointer;
+}
+
+.btn-tabla:hover {
+  background-color: var(--color-fondo);
+}
+
+.btn-borrar:hover {
+  background-color: var(--color-acento);
+  color: #fff;
+  border-color: var(--color-acento);
+}
+.formulario-admin {
+  max-width: 600px;
+}
+
+.acciones-form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - Administración</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+
+    <aside class="admin-sidebar">
+      <a href="index.html" class="admin-logo">🎸 Sonido Vivo</a>
+      <nav>
+        <ul class="admin-menu">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="productos.html" class="activo">Productos</a></li>
+          <li><a href="producto-form.html">Nuevo producto</a></li>
+          <li><a href="usuarios.html">Usuarios</a></li>
+          <li><a href="usuario-form.html">Nuevo usuario</a></li>
+        </ul>
+      </nav>
+      <a href="../index.html" class="volver-tienda">← Volver a la tienda</a>
+    </aside>
+
+    <main class="admin-contenido">
+      <header class="admin-header barra-titulo">
+        <h1>Productos</h1>
+        <a href="producto-form.html" class="btn">Nuevo producto</a>
+      </header>
+
+      <section class="admin-seccion">
+        <table class="tabla-admin">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-productos"></tbody>
+        </table>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="../js/productos.js"></script>
+  <script src="../js/usuarios.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo Usuario - Administración</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+
+    <aside class="admin-sidebar">
+      <a href="index.html" class="admin-logo">🎸 Sonido Vivo</a>
+      <nav>
+        <ul class="admin-menu">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="producto-form.html">Nuevo producto</a></li>
+          <li><a href="usuarios.html">Usuarios</a></li>
+          <li><a href="usuario-form.html" class="activo">Nuevo usuario</a></li>
+        </ul>
+      </nav>
+      <a href="../index.html" class="volver-tienda">← Volver a la tienda</a>
+    </aside>
+
+    <main class="admin-contenido">
+      <header class="admin-header">
+        <h1>Nuevo usuario</h1>
+      </header>
+
+      <section class="admin-seccion">
+        <form id="form-usuario" class="formulario-admin" novalidate>
+
+          <div class="campo">
+            <label for="run-adm">RUN *</label>
+            <input type="text" id="run-adm" name="run" maxlength="9" placeholder="19011022K">
+            <small class="ayuda">Sin puntos ni guion. Entre 7 y 9 caracteres.</small>
+            <span class="error" id="error-run-adm"></span>
+          </div>
+
+          <div class="campo">
+            <label for="nombres-adm">Nombre *</label>
+            <input type="text" id="nombres-adm" name="nombres" maxlength="50">
+            <span class="error" id="error-nombres-adm"></span>
+          </div>
+
+          <div class="campo">
+            <label for="apellidos-adm">Apellidos *</label>
+            <input type="text" id="apellidos-adm" name="apellidos" maxlength="100">
+            <span class="error" id="error-apellidos-adm"></span>
+          </div>
+
+          <div class="campo">
+            <label for="correo-adm">Correo *</label>
+            <input type="email" id="correo-adm" name="correo" maxlength="100">
+            <small class="ayuda">Solo @duoc.cl, @profesor.duoc.cl o @gmail.com</small>
+            <span class="error" id="error-correo-adm"></span>
+          </div>
+
+          <div class="campo">
+            <label for="fecha-adm">Fecha de nacimiento (opcional)</label>
+            <input type="date" id="fecha-adm" name="fechaNacimiento">
+          </div>
+
+          <div class="campo">
+            <label for="tipo-usuario">Tipo de usuario *</label>
+            <select id="tipo-usuario" name="tipoUsuario">
+              <option value="">-- Seleccione el perfil --</option>
+              <option value="Administrador">Administrador</option>
+              <option value="Vendedor">Vendedor</option>
+              <option value="Cliente">Cliente</option>
+            </select>
+            <span class="error" id="error-tipo-usuario"></span>
+          </div>
+
+          <div class="campo">
+            <label for="region">Región *</label>
+            <select id="region" name="region">
+              <option value="">-- Seleccione la región --</option>
+            </select>
+            <span class="error" id="error-region"></span>
+          </div>
+
+          <div class="campo">
+            <label for="comuna">Comuna *</label>
+            <select id="comuna" name="comuna">
+              <option value="">-- Seleccione la comuna --</option>
+            </select>
+            <span class="error" id="error-comuna"></span>
+          </div>
+
+          <div class="campo">
+            <label for="direccion-adm">Dirección *</label>
+            <input type="text" id="direccion-adm" name="direccion" maxlength="300">
+            <span class="error" id="error-direccion-adm"></span>
+          </div>
+
+          <div class="acciones-form">
+            <button type="submit" class="btn">Guardar usuario</button>
+            <a href="usuarios.html" class="btn-tabla">Cancelar</a>
+          </div>
+
+        </form>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="../js/productos.js"></script>
+  <script src="../js/usuarios.js"></script>
+  <script src="../js/carrito.js"></script>
+  <script src="../js/regiones.js"></script>
+  <script src="../js/validaciones.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
