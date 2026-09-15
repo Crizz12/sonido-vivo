@@ -195,3 +195,29 @@ footer {
 .btn-añadir:hover {
   background-color: var(--color-acento);
 }
+/* === Notificaciones === */
+.notificacion {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: aparecer 0.3s ease;
+}
+
+.notificacion.exito {
+  background-color: #2e7d32;
+}
+
+.notificacion.error {
+  background-color: var(--color-acento);
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
