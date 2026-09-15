@@ -185,6 +185,17 @@ function validarRegistro() {
     valido = false;
   }
 
+  // Campo opcional: si se ingresa, no puede ser una fecha futura
+  const fechaNacimiento = document.getElementById("fecha-nacimiento").value;
+  limpiarError("fecha-nacimiento");
+  if (fechaNacimiento !== "") {
+    const hoy = new Date().toISOString().split("T")[0];
+    if (fechaNacimiento > hoy) {
+      mostrarError("fecha-nacimiento", "La fecha de nacimiento no puede ser futura");
+      valido = false;
+    }
+  }
+
   limpiarError("password");
   if (password === "") {
     mostrarError("password", "La contraseña es obligatoria");

@@ -19,6 +19,7 @@ function cargarTablaProductos() {
 
   productos.forEach(function (p) {
     const fila = document.createElement("tr");
+    fila.dataset.id = p.id;
     const claseStock = p.stock <= 3 ? "stock-critico" : "";
     fila.innerHTML = `
       <td>P${String(p.id).padStart(3, "0")}</td>
@@ -42,6 +43,7 @@ function cargarTablaUsuarios() {
 
   usuarios.forEach(function (u) {
     const fila = document.createElement("tr");
+    fila.dataset.run = u.run;
     fila.innerHTML = `
       <td>${u.run}</td>
       <td>${u.nombres} ${u.apellidos}</td>
@@ -56,6 +58,29 @@ function cargarTablaUsuarios() {
     tbody.appendChild(fila);
   });
 }
+
+// === ELIMINAR PRODUCTO O USUARIO (delegación de eventos) ===
+document.addEventListener("click", function (e) {
+  if (!e.target.classList.contains("btn-borrar")) return;
+
+  const fila = e.target.closest("tr");
+  const cuerpoTabla = e.target.closest("tbody");
+
+  if (!confirm("¿Seguro que deseas eliminar este registro?")) return;
+
+  if (cuerpoTabla.id === "tabla-productos") {
+    const id = parseInt(fila.dataset.id);
+    const indice = productos.findIndex(p => p.id === id);
+    if (indice !== -1) productos.splice(indice, 1);
+  } else if (cuerpoTabla.id === "tabla-usuarios") {
+    const indice = usuarios.findIndex(u => u.run === fila.dataset.run);
+    if (indice !== -1) usuarios.splice(indice, 1);
+  }
+
+  fila.remove();
+  cargarDashboard();
+  mostrarNotificacion("Registro eliminado correctamente");
+});
 
 // Un único punto de arranque para todo el panel
 document.addEventListener("DOMContentLoaded", function () {

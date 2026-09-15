@@ -18,6 +18,7 @@ function formatearPrecio(valor) {
 // Recorre el arreglo y dibuja una tarjeta por cada producto
 function mostrarProductos() {
   const contenedor = document.getElementById("contenedor-productos");
+  if (!contenedor) return;
   contenedor.innerHTML = "";
 
   productos.forEach(function (producto) {
