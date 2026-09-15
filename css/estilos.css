@@ -417,3 +417,14 @@ a.btn-añadir {
   font-size: 0.8rem;
   margin-top: 0.3rem;
 }
+.acceso {
+  text-align: right;
+  padding: 0.6rem 2rem;
+  background-color: #fff;
+}
+
+.acceso a {
+  margin-left: 1rem;
+  color: var(--color-primario);
+  font-size: 0.9rem;
+}
