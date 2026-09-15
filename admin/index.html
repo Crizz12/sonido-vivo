@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración - Sonido Vivo</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <div class="admin-layout">
+
+    <aside class="admin-sidebar">
+      <a href="index.html" class="admin-logo">🎸 Sonido Vivo</a>
+      <nav>
+        <ul class="admin-menu">
+          <li><a href="index.html" class="activo">Dashboard</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="producto-form.html">Nuevo producto</a></li>
+          <li><a href="usuarios.html">Usuarios</a></li>
+          <li><a href="usuario-form.html">Nuevo usuario</a></li>
+        </ul>
+      </nav>
+      <a href="../index.html" class="volver-tienda">← Volver a la tienda</a>
+    </aside>
+
+    <main class="admin-contenido">
+      <header class="admin-header">
+        <h1>¡Hola, Administrador!</h1>
+      </header>
+
+      <section class="admin-tarjetas">
+        <article class="tarjeta-dato">
+          <h3>Productos</h3>
+          <p class="dato-numero" id="total-productos">0</p>
+          <p>referencias en catálogo</p>
+        </article>
+
+        <article class="tarjeta-dato">
+          <h3>Stock total</h3>
+          <p class="dato-numero" id="total-stock">0</p>
+          <p>unidades disponibles</p>
+        </article>
+
+        <article class="tarjeta-dato">
+          <h3>Stock crítico</h3>
+          <p class="dato-numero" id="total-critico">0</p>
+          <p>productos con 3 o menos unidades</p>
+        </article>
+
+        <article class="tarjeta-dato">
+          <h3>Usuarios</h3>
+          <p class="dato-numero" id="total-usuarios">0</p>
+          <p>registrados en el sistema</p>
+        </article>
+      </section>
+
+      <section class="admin-seccion">
+        <h2>Accesos rápidos</h2>
+        <ul>
+          <li><a href="productos.html">Ver listado de productos</a></li>
+          <li><a href="producto-form.html">Crear un nuevo producto</a></li>
+          <li><a href="usuarios.html">Ver listado de usuarios</a></li>
+        </ul>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="../js/productos.js"></script>
+  <script src="../js/usuarios.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
